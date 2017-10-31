@@ -98,6 +98,7 @@ if (!isset($_SESSION['fb_access_token'])) {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Home</a></li>
                 <li><a href="?logout">Logout</a></li>
             </ul>
         </div>
@@ -182,7 +183,7 @@ if (!isset($_SESSION['fb_access_token'])) {
                     ?>
                 </div>
                 <div class="content">
-                    <h3><?php echo $album['name'].' ('.$album['count'].')' ;?></h3>
+                    <a href="photos.php?album_id=<?php echo $album['id'] ?>"><h3><?php echo $album['name'].' ('.$album['count'].')' ;?></h3></a>
                     <input type="checkbox" id="check" value="<?php echo $album['id']; ?>">
                     <label for="box-1"> Select</label>
                     <button class="btn btn-success download_album" data-id="<?php echo $album['id']; ?>"><i class="fa fa-download"></i></button>
